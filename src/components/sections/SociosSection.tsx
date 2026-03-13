@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, Zap } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Donner from '../../assets/Donner.jpeg';
+import Davi from '../../assets/Davi.jpeg';
 
 const sociosData = [
   {
-    nome: "Donner Octávio",
+    nome: "Octávio Donner",
     cargo: "Sócio Diretor & Especialista em Vendas",
     experiencia: "+10 anos",
     especialidade: "Referência Nacional",
@@ -17,7 +18,7 @@ const sociosData = [
     experiencia: "+8 anos",
     especialidade: "Eficiência Energética",
     descricao: "Especialista em implementação de infraestrutura de larga escala, focado em garantir que os sistemas de automação e energia operem com máxima performance e segurança.",
-    imagem: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800"
+    imagem: Davi
   }
 ];
 
@@ -38,7 +39,7 @@ export default function SociosSection() {
     <section id="socios" className="py-24 px-6 max-w-7xl mx-auto">
       <div className="bg-[#12111F] rounded-[40px] border border-white/5 overflow-hidden shadow-2xl min-h-[650px] flex flex-col md:flex-row transition-all duration-500">
         
-        {/* Lado Esquerdo: Informações (Dinâmico) */}
+        {/* Lado Esquerdo: Informações */}
         <div className="flex-1 p-12 md:p-20 flex flex-col justify-center space-y-8 animate-in fade-in slide-in-from-left-4 duration-700">
           <div className="space-y-4">
             <span className="text-[#FE7F32] font-bold text-xs uppercase tracking-[0.4em]">Liderança & Visão</span>
@@ -70,19 +71,19 @@ export default function SociosSection() {
           </div>
         </div>
 
-        {/* Lado Direito: Imagem com Navegação */}
+        {/* Lado Direito: Imagem com Cores Reais */}
         <div className="w-full md:w-2/5 min-h-[500px] relative overflow-hidden group">
           <img 
             key={socio.nome}
             src={socio.imagem} 
             alt={socio.nome} 
-            className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 animate-in zoom-in-105"
+            className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 animate-in zoom-in-105"
           />
           
-          {/* Overlay de Gradiente */}
-          <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#12111F]/30" />
+          {/* Overlay de Gradiente - Ajustado para não esconder as cores */}
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#12111F]/10 to-[#12111F]/40" />
 
-          {/* Botões de Navegação Lateral na Foto */}
+          {/* Botões de Navegação Lateral */}
           <div className="absolute inset-y-0 right-4 flex flex-col justify-center gap-4 z-20">
             <button 
               onClick={proximoSocio}
