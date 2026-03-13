@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --color-aura-orange: #FE7F32;
+  --color-aura-black: #12111F;
+}
