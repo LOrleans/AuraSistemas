@@ -23,9 +23,12 @@ export default function SocialProof() {
 
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="mb-16 space-y-4">
-          <span className="text-[#FE7F32] font-bold text-xs uppercase tracking-[0.4em]">Prova Real</span>
-          <h2 className="text-4xl md:text-6xl font-light uppercase tracking-tighter">
-            Projetos que <span className="text-[#FE7F32] font-medium">Geram Valor</span>
+          <span className="text-[#FE7F32] font-bold text-md md:text-xs uppercase tracking-[0.4em]">Prova Real</span>
+          <h2 className="text-5xl md:text-6xl font-light uppercase tracking-tighter leading-tight md:leading-none">
+            Projetos que 
+            <span className="text-[#FE7F32] font-medium block md:inline mt-2 md:mt-0">
+              {" "}Geram Valor
+            </span>
           </h2>
         </div>
 

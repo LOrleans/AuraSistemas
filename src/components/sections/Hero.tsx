@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Zap,
-  Cpu,
-  Shield,
-  ArrowRight,
-  Menu,
-  ArrowUpRight,
-  Home,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import HeroImage from "../../assets/heroimage.png";
 
 export default function Hero() {
@@ -23,7 +15,6 @@ export default function Hero() {
           className="w-full h-full object-cover opacity-60 grayscale-[20%]"
           alt="Infraestrutura Inteligente Aura"
         />
-        {/* Gradiente para legibilidade à esquerda */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#12111F] via-[#12111F]/40 to-transparent" />
       </div>
 
@@ -48,9 +39,13 @@ export default function Hero() {
           </p>
 
           <div className="pt-4">
-            <button className="bg-[#FE7F32] text-white px-12 py-5 rounded-sm font-black uppercase tracking-widest flex items-center gap-3 hover:bg-[#e66e28] transition-all">
+            {/* BOTÃO TRANSFORMADO EM LINK PARA REDIRECIONAMENTO */}
+            <a 
+              href="#contato"
+              className="inline-flex items-center gap-3 bg-[#FE7F32] text-[#12111F] px-12 py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-white hover:scale-105 transition-all shadow-[0_15px_30px_rgba(254,127,50,0.2)]"
+            >
               Solicitar Orçamento <ArrowRight size={18} />
-            </button>
+            </a>
           </div>
         </div>
       </div>

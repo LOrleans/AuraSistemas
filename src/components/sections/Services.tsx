@@ -1,35 +1,42 @@
 import { ArrowRight, BatteryCharging, LineChart, Sun } from "lucide-react";
 
+const services = [
+  { 
+    title: 'Consultoria e Análise', 
+    desc: 'Estudo técnico de viabilidade e análise de faturas para garantir o dimensionamento perfeito do seu sistema.',
+    icon: <LineChart size={32} />,
+    tag: 'Estudo'
+  },
+  { 
+    title: 'Instalação Premium', 
+    desc: 'Equipamentos de alta performance e equipe de engenharia própria para garantir segurança e longevidade.',
+    icon: <Sun size={32} />,
+    tag: 'Execução'
+  },
+  { 
+    title: 'Monitoramento 24h', 
+    desc: 'Acompanhe sua geração em tempo real via App e tenha suporte proativo para manutenção preventiva.',
+    icon: <BatteryCharging size={32} />,
+    tag: 'Suporte'
+  }
+]
+
 export default function Services() {
     return (
       <section id="servicos" className="py-32 px-6 bg-[#0d0c16]">
         <div className="max-w-7xl mx-auto">
           <div className="mb-20 space-y-4">
-            <span className="text-[#FE7F32] font-bold text-xs uppercase tracking-[0.4em]">Soluções em Energia</span>
-            <h2 className="text-4xl md:text-6xl font-light uppercase tracking-tighter">Engenharia <span className="text-[#FE7F32] font-medium">Solar de Ponta</span></h2>
+            <span className="text-[#FE7F32] font-bold text-md md:text-xs uppercase tracking-[0.4em]">Soluções em Energia</span>
+            <h2 className="text-5xl md:text-6xl font-light uppercase tracking-tighter leading-tight md:leading-none">
+              Engenharia 
+              <span className="text-[#FE7F32] font-medium block md:inline">
+                {" "}Solar de Ponta
+              </span>
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { 
-                title: 'Consultoria e Análise', 
-                desc: 'Estudo técnico de viabilidade e análise de faturas para garantir o dimensionamento perfeito do seu sistema.',
-                icon: <LineChart size={32} />,
-                tag: 'Estudo'
-              },
-              { 
-                title: 'Instalação Premium', 
-                desc: 'Equipamentos de alta performance e equipe de engenharia própria para garantir segurança e longevidade.',
-                icon: <Sun size={32} />,
-                tag: 'Execução'
-              },
-              { 
-                title: 'Monitoramento 24h', 
-                desc: 'Acompanhe sua geração em tempo real via App e tenha suporte proativo para manutenção preventiva.',
-                icon: <BatteryCharging size={32} />,
-                tag: 'Suporte'
-              }
-            ].map((service, index) => (
+            {services.map((service, index) => (
               <div key={index} className="group relative bg-[#12111F] p-10 rounded-[40px] border border-white/5 hover:border-[#FE7F32]/40 transition-all duration-500 hover:-translate-y-2 overflow-hidden shadow-2xl">
                 <div className="absolute -top-24 -right-24 w-48 h-48 bg-[#FE7F32]/10 rounded-full blur-[60px] group-hover:bg-[#FE7F32]/20 transition-all duration-700" />
                 
@@ -63,11 +70,6 @@ export default function Services() {
             <p className="text-xs uppercase tracking-[0.2em] font-medium italic">
               "Foco em máxima eficiência energética e liberdade financeira para sua infraestrutura"
             </p>
-            <div className="flex gap-4">
-              <div className="w-2 h-2 bg-[#FE7F32] rounded-full animate-pulse" />
-              <div className="w-2 h-2 bg-white/20 rounded-full" />
-              <div className="w-2 h-2 bg-white/20 rounded-full" />
-            </div>
           </div>
         </div>
       </section>

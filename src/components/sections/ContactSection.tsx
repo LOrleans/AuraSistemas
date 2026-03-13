@@ -83,7 +83,7 @@ export default function ContactSection() {
                   />
                 </div>
 
-                <button className="w-full bg-[#FE7F32] text-[#12111F] font-black uppercase tracking-widest py-5 rounded-2xl flex items-center justify-center gap-3 hover:bg-white transition-all duration-500 group">
+                <button className="w-full bg-[#FE7F32] text-[#12111F] font-black uppercase tracking-widest py-5 rounded-2xl flex items-center justify-center gap-0 hover:bg-white transition-all duration-500 group">
                   Solicitar Consultoria Grátis
                   <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
                 </button>
