@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Donner from '../../assets/Donner.jpeg';
 import Davi from '../../assets/Davi.jpeg';

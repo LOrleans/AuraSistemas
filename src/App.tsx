@@ -7,7 +7,6 @@ import Footer from './components/sections/Footer';
 import Steps from './components/sections/Steps';
 import FaqSection from './components/sections/FAQ';
 import SocialProof from './components/sections/SocialProof';
-import { Contact } from 'lucide-react';
 import ContactSection from './components/sections/ContactSection';
 
 export default function AuraLandingPage() {
