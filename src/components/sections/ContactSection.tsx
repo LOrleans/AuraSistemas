@@ -1,4 +1,4 @@
-import { Send, MessageSquare, Mail, MapPin, ArrowRight } from 'lucide-react';
+import { MessageSquare, Mail, ArrowRight } from 'lucide-react';
 
 export default function ContactSection() {
   return (
