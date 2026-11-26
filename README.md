@@ -1,73 +1,65 @@
-# React + TypeScript + Vite
+# Aura Sistemas — Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page responsiva da Aura Sistemas, empresa de soluções em energia limpa. A página apresenta os serviços, as etapas do processo, a rentabilidade, depoimentos, perguntas frequentes e um formulário de contato.
 
-Currently, two official plugins are available:
+## ✨ Seções da página
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+| Seção | Componente |
+|---|---|
+| Navegação | `NavBar` |
+| Apresentação | `Hero` |
+| Serviços | `Services` |
+| Sócios | `SociosSection` |
+| Rentabilidade | `Rentability` |
+| Prova social | `SocialProof` |
+| Etapas do processo | `Steps` |
+| Perguntas frequentes | `FAQ` |
+| Contato | `ContactSection` |
+| Rodapé | `Footer` |
 
-## React Compiler
+Todos ficam em `src/components/sections/`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Stack
 
-## Expanding the ESLint configuration
+| Tecnologia | Função |
+|---|---|
+| [React](https://react.dev/) 19 e [TypeScript](https://www.typescriptlang.org/) | Interface e tipagem |
+| [Vite](https://vite.dev/) 7 | Servidor de desenvolvimento e build |
+| [Tailwind CSS](https://tailwindcss.com/) 4 | Estilização responsiva |
+| [lucide-react](https://lucide.dev/) | Ícones |
+| ESLint | Padronização do código |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Como rodar localmente
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Pré-requisito: [Node.js](https://nodejs.org/) LTS.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/LOrleans/AuraSistemas.git
+cd AuraSistemas
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+O Vite mostra no terminal o endereço local, normalmente `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Comando | Descrição |
+|---|---|
+| `npm run dev` | Servidor de desenvolvimento |
+| `npm run build` | Verifica os tipos e gera o build de produção em `dist/` |
+| `npm run preview` | Serve o build de produção localmente |
+| `npm run lint` | Verifica o código com ESLint |
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📁 Estrutura
+
+```
+.
+├── public/                  # Arquivos estáticos
+├── src/
+│   ├── assets/              # Imagens e logos
+│   ├── components/sections/ # Seções da landing page
+│   ├── App.tsx              # Composição da página
+│   ├── main.tsx             # Ponto de entrada
+│   └── index.css            # Estilos globais e Tailwind
+├── index.html
+└── vite.config.ts
 ```
